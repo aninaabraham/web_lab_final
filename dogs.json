@@ -1,0 +1,9 @@
+[ 
+    {"breedId":"B101"},
+  {"breedName": "Golden Retriever"},
+  {"description": "Friendly,intelligent, and devoted. Great family dog."}, 
+  {"size": "Large"}, 
+  {"lifespan": "10-12 years"},
+  {"origin":"Scotland"},{"imageUrl":
+"https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg"}
+]
