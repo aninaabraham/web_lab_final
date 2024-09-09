@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breeds</title>
+    <link rel="stylesheet" href="nav.css">
+     <!-- Navigation Bar -->
+     <nav>
+        <ul>
+            <li><a href="signup.html" id="navSignup">Signup</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gr.html">dogs</a></li>
+            <li><a href="index.html">home</a></li>
+           
+           
+           
+            
+
+        </ul>
+    </nav>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .breed-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+        .breed-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .breed-details {
+            max-width: 600px;
+        }
+        .breed-details h2 {
+            margin: 0 0 10px;
+        }
+        .breed-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dog Breeds</h1>
+    <div id="breedContainer"></div>
+
+    <script>
+        // Fetch data from the JSON file from GitHub or json file
+        fetch('dogs.json')
+            .then(response => response.json())
+            .then(data => {
+                const breedContainer = document.getElementById('breedContainer');
+                
+                data.forEach(breed => {
+                    const breedCard = document.createElement('div');
+                    breedCard.className = 'breed-card';
+
+                    const img = document.createElement('img');
+                    img.src = breed.imageUrl;
+                    img.alt = breed.breedName;
+
+                    const details = document.createElement('div');
+                    details.className = 'breed-details';
+
+                    const title = document.createElement('h2');
+                    title.textContent = breed.breedName;
+
+                    const description = document.createElement('p');
+                    description.textContent = breed.description;
+
+                    const size = document.createElement('p');
+                    size.textContent = `Size: ${breed.size}`;
+
+                    const lifespan = document.createElement('p');
+                    lifespan.textContent = `Lifespan: ${breed.lifespan}`;
+
+                    const origin = document.createElement('p');
+                    origin.textContent = `Origin: ${breed.origin}`;
+
+                    details.appendChild(title);
+                    details.appendChild(description);
+                    details.appendChild(size);
+                    details.appendChild(lifespan);
+                    details.appendChild(origin);
+
+                    breedCard.appendChild(img);
+                    breedCard.appendChild(details);
+                    breedContainer.appendChild(breedCard);
+                });
+            })
+            .catch(error => console.error('Error fetching the data:', error));
+    </script>
+
+</body>
+</html>

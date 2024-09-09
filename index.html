@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>golden retriever dog Image</title>
+    <link rel="stylesheet" href="nav.css">
+     <!-- Navigation Bar -->
+     <nav>
+        <ul>
+            <li><a href="signup.html" id="navSignup">Signup</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gr.html">dogs</a></li>
+            
+           
+           
+           
+            
+
+        </ul>
+    </nav>
+
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+        }
+        #dogImage {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> dog Image</h1>
+    <button id="fetchDogBtn">Fetch Dog Image</button>
+    <!-- <button id="signup" a href="signup.html">signup</button> -->
+    <div>
+        <img id="dogImage" alt="Random Dog Image">
+    </div>
+
+   
+
+    <script>
+        document.getElementById('fetchDogBtn').addEventListener('click', function() {
+            fetch('https://dog.ceo/api/breeds/image/random') // fetching api 
+                .then(response => response.json())            //promise
+                .then(data => {
+                    document.getElementById('dogImage').src = data.message;
+                })
+                .catch(error => console.error('Error fetching the dog image:', error));
+        });
+    </script>
+   
+    <script src="form.js"></script>
+</body>
+</html>

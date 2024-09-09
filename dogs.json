@@ -1,9 +1,30 @@
-[ 
-    {"breedId":"B101"},
-  {"breedName": "Golden Retriever"},
-  {"description": "Friendly,intelligent, and devoted. Great family dog."}, 
-  {"size": "Large"}, 
-  {"lifespan": "10-12 years"},
-  {"origin":"Scotland"},{"imageUrl":
-"https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg"}
+[
+    {
+        "breedId": "B101",
+        "breedName": "Golden Retriever",
+        "description": "Friendly, intelligent, and devoted. Great family dog.",
+        "size": "Large",
+        "lifespan": "10-12 years",
+        "origin": "Scotland",
+        "imageUrl": "https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg"
+    },
+    {
+        "breedId": "B102",
+        "breedName": "Labrador Retriever",
+        "description": "Loyal, gentle, and outgoing. Excellent working dog.",
+        "size": "Large",
+        "lifespan": "10-12 years",
+        "origin": "Canada",
+        "imageUrl": "https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg"
+    },
+    {
+        "breedId": "B103",
+        "breedName": "German Shepherd",
+        "description": "Confident, courageous, and smart. Excellent guard dog.",
+        "size": "Large",
+        "lifespan": "9-13 years",
+        "origin": "Germany",
+        "imageUrl":"https://dog.ceo/api/img/retriever/golden/n02099601_3004.jpg"
+    } 
+  
 ]
